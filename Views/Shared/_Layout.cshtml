@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - FAQ</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1>Frequently Asked Questions</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-2 col-12"></div>
+            <div class="col-lg-8 col-12">
+                <nav class="nav nav-pills">
+                    <a class="nav-item nav-link highlighted-nav-item" asp-controller="Home" asp-action="Index">All FAQs</a>
+                    <a class="nav-item nav-link" asp-route-topic="Code">Code</a>
+                    <a class="nav-item nav-link" asp-route-topic="School">School</a>
+                    <a class="nav-item nav-link" asp-route-topic="Leisure">Leisure</a>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2 col-12">
+                <a class="btn btn-primary" asp-route-category="General">General</a>
+                <a class="btn btn-primary" asp-route-category="Opinion">Opinion</a>
+            </div>
+            <div class="col-lg-8 col-12">
+                @RenderBody()
+            </div>
+        </div>
+    </body>
+</html>
